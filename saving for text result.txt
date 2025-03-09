@@ -1,0 +1,370 @@
+m/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\openai\_base_client.py", line 1056, in _request
+    response.raise_for_status()
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\httpx\_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.openai.com/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\MPPhy\OneDrive\Desktop\Special Topic in Data Analytics\Assignment2\analyze_text.py", line 30, in <module>
+    df["Summary"] = df["Text"].apply(summarize)
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\pandas\core\series.py", line 4917, in apply
+    return SeriesApply(
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\pandas\core\apply.py", line 1427, in apply
+    return self.apply_standard()
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\pandas\core\apply.py", line 1507, in apply_standard
+    mapped = obj._map_values(
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\pandas\core\base.py", line 921, in _map_values
+    return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\pandas\core\algorithms.py", line 1743, in map_array
+    return lib.map_infer(values, mapper, convert=convert)
+  File "lib.pyx", line 2972, in pandas._libs.lib.map_infer
+  File "c:\Users\MPPhy\OneDrive\Desktop\Special Topic in Data Analytics\Assignment2\analyze_text.py", line 18, in summarize
+    response = openai.chat.completions.create(
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\openai\_utils\_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\openai\resources\chat\completions\completions.py", line 879, in create
+    return self._post(
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\openai\_base_client.py", line 1296, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\openai\_base_client.py", line 973, in request
+    return self._request(
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\openai\_base_client.py", line 1062, in _request
+    return self._retry_request(
+ line 1062, in _request
+    return self._retry_request(
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\openai\_base_client.py", line 1109, in _retry_request
+    time.sleep(timeout)
+KeyboardInterrupt
+^C
+(reddit_scrapper) C:\Users\MPPhy\OneDrive\Desktop\Special Topic in Data Analytics\Assignment2>C:/Users/MPPhy/anaconda3/envs/reddit_scrapper/python.exe "c:/Users/MPPhy/OneDrive/Desktop/Special Topic in Data Analytics/Assignment2/analyze_text.py"analyze_text.py
+C:/Users/MPPhy/anaconda3/envs/reddit_scrapper/python.exe: can't open file 'c:\Users\MPPhy\OneDrive\Desktop\Special Topic in Data Analytics\Assignment2\analyze_text.pyanalyze_text.py': [Errno 2] No such file or directory
+
+(reddit_scrapper) C:\Users\MPPhy\OneDrive\Desktop\Special Topic in Data Analytics\Assignment2>C:/Users/MPPhy/anaconda3/envs/reddit_scrapper/python.exe "c:/Users/MPPhy/OneDrive/Desktop/Special Topic in Data Analytics/Assignment2/analyze_text.py"
+[nltk_data] Downloading package vader_lexicon to
+[nltk_data]     C:\Users\MPPhy\AppData\Roaming\nltk_data...
+[nltk_data]   Package vader_lexicon is already up-to-date!
+2025-02-27 23:58:48,836 - INFO - Loading data from reddit_stocks.csv...
+2025-02-27 23:58:48,884 - INFO - Summarizing text using DeepSeek API...
+Summarizing:   0%|                                                                                              | 0/100 [00:00<?, ?it/s]2025-02-27 23:58:49,039 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:   2%|█▋                                                                                    | 2/100 [00:00<00:06, 14.70it/s]2025-02-27 23:58:49,134 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:49,215 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:   4%|███▍                                                                                  | 4/100 [00:00<00:07, 12.55it/s]2025-02-27 23:58:49,278 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:49,357 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:   6%|█████▏                                                                                | 6/100 [00:00<00:07, 13.18it/s]2025-02-27 23:58:49,426 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:49,499 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:   8%|██████▉                                                                               | 8/100 [00:00<00:06, 13.52it/s]2025-02-27 23:58:49,573 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:49,632 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  10%|████████▌                                                                            | 10/100 [00:00<00:06, 14.06it/s]2025-02-27 23:58:49,712 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:49,777 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  12%|██████████▏                                                                          | 12/100 [00:00<00:06, 13.99it/s]2025-02-27 23:58:49,843 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:49,909 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  14%|███████████▉                                                                         | 14/100 [00:01<00:05, 14.34it/s]2025-02-27 23:58:49,988 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:50,071 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  16%|█████████████▌                                                                       | 16/100 [00:01<00:06, 13.61it/s]2025-02-27 23:58:50,145 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:50,212 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  18%|███████████████▎                                                                     | 18/100 [00:01<00:05, 13.81it/s]2025-02-27 23:58:50,348 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:50,512 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  20%|█████████████████                                                                    | 20/100 [00:01<00:07, 10.38it/s]2025-02-27 23:58:50,643 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:50,767 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  22%|██████████████████▋                                                                  | 22/100 [00:01<00:08,  9.45it/s]2025-02-27 23:58:50,887 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:51,039 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  24%|████████████████████▍                                                                | 24/100 [00:02<00:08,  8.69it/s]2025-02-27 23:58:51,126 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:51,201 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  26%|██████████████████████                                                               | 26/100 [00:02<00:07,  9.55it/s]2025-02-27 23:58:51,311 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:51,397 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  28%|███████████████████████▊                                                             | 28/100 [00:02<00:07,  9.72it/s]2025-02-27 23:58:51,493 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:51,596 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  30%|█████████████████████████▌                                                           | 30/100 [00:02<00:07,  9.83it/s]2025-02-27 23:58:51,697 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:51,783 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  32%|███████████████████████████▏                                                         | 32/100 [00:02<00:06, 10.07it/s]2025-02-27 23:58:51,874 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:51,957 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  34%|████████████████████████████▉                                                        | 34/100 [00:03<00:06, 10.46it/s]2025-02-27 23:58:52,052 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:52,128 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  36%|██████████████████████████████▌                                                      | 36/100 [00:03<00:05, 10.80it/s]2025-02-27 23:58:52,203 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:52,293 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  38%|████████████████████████████████▎                                                    | 38/100 [00:03<00:05, 11.18it/s]2025-02-27 23:58:52,362 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:52,455 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  40%|██████████████████████████████████                                                   | 40/100 [00:03<00:05, 11.51it/s]2025-02-27 23:58:52,533 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:52,622 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  42%|███████████████████████████████████▋                                                 | 42/100 [00:03<00:04, 11.63it/s]2025-02-27 23:58:52,720 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:52,790 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  44%|█████████████████████████████████████▍                                               | 44/100 [00:03<00:04, 11.74it/s]2025-02-27 23:58:52,881 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:52,965 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  46%|███████████████████████████████████████                                              | 46/100 [00:04<00:04, 11.63it/s]2025-02-27 23:58:53,064 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:53,173 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  48%|████████████████████████████████████████▊                                            | 48/100 [00:04<00:04, 10.93it/s]2025-02-27 23:58:53,269 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:53,364 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  50%|██████████████████████████████████████████▌                                          | 50/100 [00:04<00:04, 10.79it/s]2025-02-27 23:58:53,453 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:53,538 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  52%|████████████████████████████████████████████▏                                        | 52/100 [00:04<00:04, 11.00it/s]2025-02-27 23:58:53,650 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:53,762 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  54%|█████████████████████████████████████████████▉                                       | 54/100 [00:04<00:04, 10.27it/s]2025-02-27 23:58:53,859 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:53,948 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  56%|███████████████████████████████████████████████▌                                     | 56/100 [00:05<00:04, 10.42it/s]2025-02-27 23:58:54,019 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:54,101 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  58%|█████████████████████████████████████████████████▎                                   | 58/100 [00:05<00:03, 11.07it/s]2025-02-27 23:58:54,200 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:54,284 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  60%|███████████████████████████████████████████████████                                  | 60/100 [00:05<00:03, 11.05it/s]2025-02-27 23:58:54,374 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:54,455 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  62%|████████████████████████████████████████████████████▋                                | 62/100 [00:05<00:03, 11.20it/s]2025-02-27 23:58:54,545 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:54,617 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  64%|██████████████████████████████████████████████████████▍                              | 64/100 [00:05<00:03, 11.54it/s]2025-02-27 23:58:54,708 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:54,797 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  66%|████████████████████████████████████████████████████████                             | 66/100 [00:05<00:02, 11.41it/s]2025-02-27 23:58:54,884 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:54,970 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  68%|█████████████████████████████████████████████████████████▊                           | 68/100 [00:06<00:02, 11.46it/s]2025-02-27 23:58:55,058 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:55,130 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  70%|███████████████████████████████████████████████████████████▍                         | 70/100 [00:06<00:02, 11.75it/s]2025-02-27 23:58:55,227 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:55,317 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  72%|█████████████████████████████████████████████████████████████▏                       | 72/100 [00:06<00:02, 11.43it/s]2025-02-27 23:58:55,392 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:55,461 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  74%|██████████████████████████████████████████████████████████████▉                      | 74/100 [00:06<00:02, 12.07it/s]2025-02-27 23:58:55,545 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:55,638 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  76%|████████████████████████████████████████████████████████████████▌                    | 76/100 [00:06<00:02, 11.81it/s]2025-02-27 23:58:55,753 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+2025-02-27 23:58:55,836 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  78%|██████████████████████████████████████████████████████████████████▎                  | 78/100 [00:06<00:01, 11.23it/s]2025-02-27 23:58:55,924 - ERROR - API request failed: 404 Client Error: Not Found for url: https://api.deepseek.com/v1/summarize
+Summarizing:  79%|███████████████████████████████████████████████████████████████████▏                 | 79/100 [00:07<00:01, 11.18it/s]
+Traceback (most recent call last):
+  File "c:\Users\MPPhy\OneDrive\Desktop\Special Topic in Data Analytics\Assignment2\analyze_text.py", line 124, in <module>
+    process_data(INPUT_FILE, OUTPUT_FILE)
+  File "c:\Users\MPPhy\OneDrive\Desktop\Special Topic in Data Analytics\Assignment2\analyze_text.py", line 99, in process_data
+    df["Summary"] = df["Text"].progress_apply(summarize)
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\tqdm\std.py", line 917, in inner
+    return getattr(df, df_function)(wrapper, **kwargs)
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\pandas\core\series.py", line 4917, in apply
+    return SeriesApply(
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\pandas\core\apply.py", line 1427, in apply
+    return self.apply_standard()
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\pandas\core\apply.py", line 1507, in apply_standard
+    mapped = obj._map_values(
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\pandas\core\base.py", line 921, in _map_values
+    return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\pandas\core\algorithms.py", line 1743, in map_array
+    return lib.map_infer(values, mapper, convert=convert)
+  File "lib.pyx", line 2972, in pandas._libs.lib.map_infer
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\tqdm\std.py", line 912, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\MPPhy\OneDrive\Desktop\Special Topic in Data Analytics\Assignment2\analyze_text.py", line 45, in summarize
+    response = requests.post(DEEPSEEK_API_URL, headers=headers, json=data)
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\urllib3\connection.py", line 741, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\urllib3\connection.py", line 920, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\urllib3\util\ssl_.py", line 460, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\site-packages\urllib3\util\ssl_.py", line 504, in _ssl_wrap_socket_impl        
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\ssl.py", line 501, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\ssl.py", line 1074, in _create
+    self.do_handshake()
+  File "C:\Users\MPPhy\anaconda3\envs\reddit_scrapper\lib\ssl.py", line 1343, in do_handshake
+    self._sslobj.do_handshake()
+KeyboardInterrupt
+^C
+(reddit_scrapper) C:\Users\MPPhy\OneDrive\Desktop\Special Topic in Data Analytics\Assignment2>analyze_text.py
+
+(reddit_scrapper) C:\Users\MPPhy\OneDrive\Desktop\Special Topic in Data Analytics\Assignment2>python analyze_text.py
+[nltk_data] Downloading package vader_lexicon to
+[nltk_data]     C:\Users\MPPhy\AppData\Roaming\nltk_data...
+[nltk_data]   Package vader_lexicon is already up-to-date!
+2025-02-28 00:12:21,798 - INFO - Loading data from reddit_stocks.csv...
+2025-02-28 00:12:21,817 - INFO - Summarizing text using OpenAI API...
+Summarizing:   1%|▉                                                                                             | 1/100 [00:00<?, ?it/s]
+2025-02-28 00:12:21,835 - ERROR - An error occurred: module 'openai' has no attribute 'error'
+
+(reddit_scrapper) C:\Users\MPPhy\OneDrive\Desktop\Special Topic in Data Analytics\Assignment2>pip install --upgrade openai
+Requirement already satisfied: openai in c:\users\mpphy\anaconda3\envs\reddit_scrapper\lib\site-packages (1.65.1)
+Requirement already satisfied: anyio<5,>=3.5.0 in c:\users\mpphy\anaconda3\envs\reddit_scrapper\lib\site-packages (from openai) (4.8.0)
+Requirement already satisfied: distro<2,>=1.7.0 in c:\users\mpphy\anaconda3\envs\reddit_scrapper\lib\site-packages (from openai) (1.9.0)
+Requirement already satisfied: httpx<1,>=0.23.0 in c:\users\mpphy\anaconda3\envs\reddit_scrapper\lib\site-packages (from openai) (0.28.1)
+Requirement already satisfied: jiter<1,>=0.4.0 in c:\users\mpphy\anaconda3\envs\reddit_scrapper\lib\site-packages (from openai) (0.8.2)  
+Requirement already satisfied: pydantic<3,>=1.9.0 in c:\users\mpphy\anaconda3\envs\reddit_scrapper\lib\site-packages (from openai) (2.10.6)
+Requirement already satisfied: sniffio in c:\users\mpphy\anaconda3\envs\reddit_scrapper\lib\site-packages (from openai) (1.3.1)
+Requirement already satisfied: tqdm>4 in c:\users\mpphy\anaconda3\envs\reddit_scrapper\lib\site-packages (from openai) (4.67.1)
+Requirement already satisfied: typing-extensions<5,>=4.11 in c:\users\mpphy\anaconda3\envs\reddit_scrapper\lib\site-packages (from openai) (4.12.2)
+Requirement already satisfied: exceptiongroup>=1.0.2 in c:\users\mpphy\anaconda3\envs\reddit_scrapper\lib\site-packages (from anyio<5,>=3.5.0->openai) (1.2.2)
+Requirement already satisfied: idna>=2.8 in c:\users\mpphy\anaconda3\envs\reddit_scrapper\lib\site-packages (from anyio<5,>=3.5.0->openai) (3.10)
+Requirement already satisfied: certifi in c:\users\mpphy\anaconda3\envs\reddit_scrapper\lib\site-packages (from httpx<1,>=0.23.0->openai) (2025.1.31)
+Requirement already satisfied: httpcore==1.* in c:\users\mpphy\anaconda3\envs\reddit_scrapper\lib\site-packages (from httpx<1,>=0.23.0->o(from pydantic<3,>=1.9.0->openai) (2.27.2)
+Requirement already satisfied: colorama in c:\users\mpphy\anaconda3\envs\reddit_scrapper\lib\site-packages (from tqdm>4->openai) (0.4.6) 
+
+(reddit_scrapper) C:\Users\MPPhy\OneDrive\Desktop\Special Topic in Data Analytics\Assignment2>python analyze_text.py      
+[nltk_data] Downloading package vader_lexicon to
+[nltk_data]     C:\Users\MPPhy\AppData\Roaming\nltk_data...
+[nltk_data]   Package vader_lexicon is already up-to-date!
+2025-02-28 00:58:51,378 - INFO - Loading data from reddit_stocks.csv...
+2025-02-28 00:58:51,398 - INFO - Summarizing text using OpenAI API...
+Summarizing:   0%|                                                                                              | 0/100 [00:00<?, ?it/s]2025-02-28 00:58:53,414 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:   2%|█▋                                                                                    | 2/100 [00:02<01:39,  1.01s/it]2025-02-28 00:58:53,973 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:   3%|██▌                                                                                   | 3/100 [00:02<01:19,  1.23it/s]2025-02-28 00:58:54,609 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:   4%|███▍                                                                                  | 4/100 [00:03<01:11,  1.34it/s]2025-02-28 00:58:55,232 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:   5%|████▎                                                                                 | 5/100 [00:03<01:06,  1.42it/s]2025-02-28 00:58:55,858 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:   6%|█████▏                                                                                | 6/100 [00:04<01:03,  1.47it/s]2025-02-28 00:58:56,553 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:   7%|██████                                                                                | 7/100 [00:05<01:03,  1.46it/s]2025-02-28 00:58:57,173 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:   8%|██████▉                                                                               | 8/100 [00:05<01:00,  1.51it/s]2025-02-28 00:58:57,736 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:   9%|███████▋                                                                              | 9/100 [00:06<00:57,  1.58it/s]2025-02-28 00:58:58,364 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  10%|████████▌                                                                            | 10/100 [00:06<00:56,  1.58it/s]2025-02-28 00:58:59,005 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  11%|█████████▎                                                                           | 11/100 [00:07<00:56,  1.58it/s]2025-02-28 00:58:59,661 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  12%|██████████▏                                                                          | 12/100 [00:08<00:56,  1.56it/s]2025-02-28 00:59:00,623 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  13%|███████████                                                                          | 13/100 [00:09<01:04,  1.35it/s]2025-02-28 00:59:01,229 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  14%|███████████▉                                                                         | 14/100 [00:09<00:59,  1.44it/s]2025-02-28 00:59:01,916 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  15%|████████████▊                                                                        | 15/100 [00:10<00:59,  1.44it/s]2025-02-28 00:59:02,513 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  16%|█████████████▌                                                                       | 16/100 [00:11<00:55,  1.51it/s]2025-02-28 00:59:03,189 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  17%|██████████████▍                                                                      | 17/100 [00:11<00:55,  1.50it/s]2025-02-28 00:59:03,833 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  18%|███████████████▎                                                                     | 18/100 [00:12<00:54,  1.51it/s]2025-02-28 00:59:04,509 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  19%|████████████████▏                                                                    | 19/100 [00:13<00:53,  1.50it/s]2025-02-28 00:59:05,217 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  20%|█████████████████                                                                    | 20/100 [00:13<00:54,  1.48it/s]2025-02-28 00:59:05,928 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  21%|█████████████████▊                                                                   | 21/100 [00:14<00:54,  1.45it/s]2025-02-28 00:59:06,652 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  22%|██████████████████▋                                                                  | 22/100 [00:15<00:54,  1.43it/s]2025-02-28 00:59:07,435 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  23%|███████████████████▌                                                                 | 23/100 [00:16<00:55,  1.38it/s]2025-02-28 00:59:08,180 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  24%|████████████████████▍                                                                | 24/100 [00:16<00:55,  1.37it/s]2025-02-28 00:59:09,002 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  25%|█████████████████████▎                                                               | 25/100 [00:17<00:56,  1.32it/s]2025-02-28 00:59:09,769 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  26%|██████████████████████                                                               | 26/100 [00:18<00:56,  1.31it/s]2025-02-28 00:59:10,360 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  27%|██████████████████████▉                                                              | 27/100 [00:18<00:51,  1.41it/s]2025-02-28 00:59:11,708 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  28%|███████████████████████▊                                                             | 28/100 [00:20<01:04,  1.11it/s]2025-02-28 00:59:12,407 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  29%|████████████████████████▋                                                            | 29/100 [00:21<00:59,  1.19it/s]2025-02-28 00:59:13,270 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  30%|█████████████████████████▌                                                           | 30/100 [00:21<00:59,  1.18it/s]2025-02-28 00:59:13,979 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  31%|██████████████████████████▎                                                          | 31/100 [00:22<00:55,  1.24it/s]2025-02-28 00:59:14,639 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  32%|███████████████████████████▏                                                         | 32/100 [00:23<00:51,  1.31it/s]2025-02-28 00:59:15,372 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  33%|████████████████████████████                                                         | 33/100 [00:23<00:50,  1.33it/s]2025-02-28 00:59:16,083 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  34%|████████████████████████████▉                                                        | 34/100 [00:24<00:48,  1.35it/s]2025-02-28 00:59:16,799 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  35%|█████████████████████████████▋                                                       | 35/100 [00:25<00:47,  1.36it/s]2025-02-28 00:59:20,988 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  36%|██████████████████████████████▌                                                      | 36/100 [00:29<01:53,  1.77s/it]2025-02-28 00:59:21,654 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  37%|███████████████████████████████▍                                                     | 37/100 [00:30<01:30,  1.44s/it]2025-02-28 00:59:22,325 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  38%|████████████████████████████████▎                                                    | 38/100 [00:30<01:14,  1.21s/it]2025-02-28 00:59:22,931 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  39%|█████████████████████████████████▏                                                   | 39/100 [00:31<01:02,  1.03s/it]2025-02-28 00:59:23,611 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  40%|██████████████████████████████████                                                   | 40/100 [00:32<00:55,  1.08it/s]2025-02-28 00:59:24,222 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  41%|██████████████████████████████████▊                                                  | 41/100 [00:32<00:48,  1.21it/s]2025-02-28 00:59:25,273 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  42%|███████████████████████████████████▋                                                 | 42/100 [00:33<00:51,  1.12it/s]2025-02-28 00:59:25,891 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  43%|████████████████████████████████████▌                                                | 43/100 [00:34<00:46,  1.23it/s]2025-02-28 00:59:26,842 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  44%|█████████████████████████████████████▍                                               | 44/100 [00:35<00:47,  1.17it/s]2025-02-28 00:59:27,510 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  45%|██████████████████████████████████████▎                                              | 45/100 [00:36<00:43,  1.25it/s]2025-02-28 00:59:28,303 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  46%|███████████████████████████████████████                                              | 46/100 [00:36<00:43,  1.25it/s]2025-02-28 00:59:34,222 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  47%|███████████████████████████████████████▉                                             | 47/100 [00:42<02:03,  2.34s/it]2025-02-28 00:59:35,187 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  48%|████████████████████████████████████████▊                                            | 48/100 [00:43<01:39,  1.92s/it]2025-02-28 00:59:35,904 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  49%|█████████████████████████████████████████▋                                           | 49/100 [00:44<01:19,  1.56s/it]2025-02-28 00:59:36,542 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  50%|██████████████████████████████████████████▌                                          | 50/100 [00:45<01:04,  1.28s/it]2025-02-28 00:59:37,255 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  51%|███████████████████████████████████████████▎                                         | 51/100 [00:45<00:54,  1.11s/it]2025-02-28 00:59:38,063 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  52%|████████████████████████████████████████████▏                                        | 52/100 [00:46<00:48,  1.02s/it]2025-02-28 00:59:39,315 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  53%|█████████████████████████████████████████████                                        | 53/100 [00:47<00:51,  1.09s/it]2025-02-28 00:59:39,948 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  54%|█████████████████████████████████████████████▉                                       | 54/100 [00:48<00:43,  1.05it/s]2025-02-28 00:59:40,620 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  55%|██████████████████████████████████████████████▊                                      | 55/100 [00:49<00:39,  1.15it/s]2025-02-28 00:59:41,299 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  56%|███████████████████████████████████████████████▌                                     | 56/100 [00:49<00:35,  1.23it/s]2025-02-28 00:59:41,956 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  57%|████████████████████████████████████████████████▍                                    | 57/100 [00:50<00:32,  1.31it/s]2025-02-28 00:59:42,664 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  58%|█████████████████████████████████████████████████▎                                   | 58/100 [00:51<00:31,  1.34it/s]2025-02-28 00:59:43,280 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  59%|██████████████████████████████████████████████████▏                                  | 59/100 [00:51<00:29,  1.41it/s]2025-02-28 00:59:43,945 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  60%|███████████████████████████████████████████████████                                  | 60/100 [00:52<00:27,  1.44it/s]2025-02-28 00:59:45,031 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  61%|███████████████████████████████████████████████████▊                                 | 61/100 [00:53<00:31,  1.23it/s]2025-02-28 00:59:45,699 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  62%|████████████████████████████████████████████████████▋                                | 62/100 [00:54<00:29,  1.30it/s]2025-02-28 00:59:46,259 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  63%|█████████████████████████████████████████████████████▌                               | 63/100 [00:54<00:26,  1.42it/s]2025-02-28 00:59:46,871 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  64%|██████████████████████████████████████████████████████▍                              | 64/100 [00:55<00:24,  1.48it/s]2025-02-28 00:59:47,568 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  65%|███████████████████████████████████████████████████████▎                             | 65/100 [00:56<00:23,  1.46it/s]2025-02-28 00:59:48,493 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  66%|████████████████████████████████████████████████████████                             | 66/100 [00:57<00:25,  1.32it/s]2025-02-28 00:59:49,049 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  67%|████████████████████████████████████████████████████████▉                            | 67/100 [00:57<00:23,  1.43it/s]2025-02-28 00:59:49,754 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  68%|█████████████████████████████████████████████████████████▊                           | 68/100 [00:58<00:22,  1.43it/s]2025-02-28 00:59:50,413 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  69%|██████████████████████████████████████████████████████████▋                          | 69/100 [00:59<00:21,  1.46it/s]2025-02-28 00:59:50,995 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  70%|███████████████████████████████████████████████████████████▍                         | 70/100 [00:59<00:19,  1.53it/s]2025-02-28 00:59:51,461 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+025-02-28 00:59:46,871 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  64%|██████████████████████████████████████████████████████▍                              | 64/100 [00:55<00:24,  1.48it/s]2025-02-28 00:59:47,568 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  65%|███████████████████████████████████████████████████████▎                             | 65/100 [00:56<00:23,  1.46it/s]2025-02-28 00:59:48,493 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  66%|████████████████████████████████████████████████████████                             | 66/100 [00:57<00:25,  1.32it/s]2025-02-28 00:59:49,049 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  67%|████████████████████████████████████████████████████████▉                            | 67/100 [00:57<00:23,  1.43it/s]2025-02-28 00:59:49,754 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  68%|█████████████████████████████████████████████████████████▊                           | 68/100 [00:58<00:22,  1.43it/s]2025-02-28 00:59:50,413 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  69%|██████████████████████████████████████████████████████████▋                          | 69/100 [00:59<00:21,  1.46it/s]2025-02-28 00:59:50,995 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  70%|███████████████████████████████████████████████████████████▍                         | 70/100 [00:59<00:19,  1.53it/s]2025-02-28 00:59:51,461 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  64%|██████████████████████████████████████████████████████▍                              | 64/100 [00:55<00:24,  1.48it/s]2025-02-28 00:59:47,568 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  65%|███████████████████████████████████████████████████████▎                             | 65/100 [00:56<00:23,  1.46it/s]2025-02-28 00:59:48,493 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  66%|████████████████████████████████████████████████████████                             | 66/100 [00:57<00:25,  1.32it/s]2025-02-28 00:59:49,049 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  67%|████████████████████████████████████████████████████████▉                            | 67/100 [00:57<00:23,  1.43it/s]2025-02-28 00:59:49,754 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  68%|█████████████████████████████████████████████████████████▊                           | 68/100 [00:58<00:22,  1.43it/s]2025-02-28 00:59:50,413 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  69%|██████████████████████████████████████████████████████████▋                          | 69/100 [00:59<00:21,  1.46it/s]2025-02-28 00:59:50,995 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  70%|███████████████████████████████████████████████████████████▍                         | 70/100 [00:59<00:19,  1.53it/s]2025-02-28 00:59:51,461 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+025-02-28 00:59:48,493 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  66%|████████████████████████████████████████████████████████                             | 66/100 [00:57<00:25,  1.32it/s]2025-02-28 00:59:49,049 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  67%|████████████████████████████████████████████████████████▉                            | 67/100 [00:57<00:23,  1.43it/s]2025-02-28 00:59:49,754 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  68%|█████████████████████████████████████████████████████████▊                           | 68/100 [00:58<00:22,  1.43it/s]2025-02-28 00:59:50,413 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  69%|██████████████████████████████████████████████████████████▋                          | 69/100 [00:59<00:21,  1.46it/s]2025-02-28 00:59:50,995 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  70%|███████████████████████████████████████████████████████████▍                         | 70/100 [00:59<00:19,  1.53it/s]2025-02-28 00:59:51,461 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+025-02-28 00:59:49,049 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  67%|████████████████████████████████████████████████████████▉                            | 67/100 [00:57<00:23,  1.43it/s]2025-02-28 00:59:49,754 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  68%|█████████████████████████████████████████████████████████▊                           | 68/100 [00:58<00:22,  1.43it/s]2025-02-28 00:59:50,413 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  69%|██████████████████████████████████████████████████████████▋                          | 69/100 [00:59<00:21,  1.46it/s]2025-02-28 00:59:50,995 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  70%|███████████████████████████████████████████████████████████▍                         | 70/100 [00:59<00:19,  1.53it/s]2025-02-28 00:59:51,461 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+025-02-28 00:59:49,754 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  68%|█████████████████████████████████████████████████████████▊                           | 68/100 [00:58<00:22,  1.43it/s]2025-02-28 00:59:50,413 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  69%|██████████████████████████████████████████████████████████▋                          | 69/100 [00:59<00:21,  1.46it/s]2025-02-28 00:59:50,995 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  70%|███████████████████████████████████████████████████████████▍                         | 70/100 [00:59<00:19,  1.53it/s]2025-02-28 00:59:51,461 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+025-02-28 00:59:50,413 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  69%|██████████████████████████████████████████████████████████▋                          | 69/100 [00:59<00:21,  1.46it/s]2025-02-28 00:59:50,995 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  70%|███████████████████████████████████████████████████████████▍                         | 70/100 [00:59<00:19,  1.53it/s]2025-02-28 00:59:51,461 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+025-02-28 00:59:50,995 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  70%|███████████████████████████████████████████████████████████▍                         | 70/100 [00:59<00:19,  1.53it/s]2025-02-28 00:59:51,461 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  70%|███████████████████████████████████████████████████████████▍                         | 70/100 [00:59<00:19,  1.53it/s]2025-02-28 00:59:51,461 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+025-02-28 00:59:51,461 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  71%|████████████████████████████████████████████████████████████▎                        | 71/100 [01:00<00:17,  1.67it/s]2025-02-28 00:59:52,088 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  71%|████████████████████████████████████████████████████████████▎                        | 71/100 [01:00<00:17,  1.67it/s]2025-02-28 00:59:52,088 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+025-02-28 00:59:52,088 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  72%|█████████████████████████████████████████████████████████████▏                       | 72/100 [01:00<00:17,  1.64it/s]2025-02-28 00:59:52,792 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  73%|██████████████████████████████████████████████████████████████                       | 73/100 [01:01<00:17,  1.57it/s]2025-02-28 00:59:53,400 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  74%|██████████████████████████████████████████████████████████████▉                      | 74/100 [01:01<00:16,  1.60it/s]2025-02-28 00:59:54,061 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  75%|███████████████████████████████████████████████████████████████▊                     | 75/100 [01:02<00:15,  1.57it/s]2025-02-28 00:59:54,665 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  76%|████████████████████████████████████████████████████████████████▌                    | 76/100 [01:03<00:15,  1.59it/s]2025-02-28 00:59:55,567 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  77%|█████████████████████████████████████████████████████████████████▍                   | 77/100 [01:04<00:16,  1.41it/s]2025-02-28 00:59:56,267 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  78%|██████████████████████████████████████████████████████████████████▎                  | 78/100 [01:04<00:15,  1.42it/s]2025-02-28 00:59:56,870 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  79%|███████████████████████████████████████████████████████████████████▏                 | 79/100 [01:05<00:14,  1.48it/s]2025-02-28 00:59:57,498 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  80%|████████████████████████████████████████████████████████████████████                 | 80/100 [01:06<00:13,  1.51it/s]2025-02-28 00:59:58,297 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  81%|████████████████████████████████████████████████████████████████████▊                | 81/100 [01:06<00:13,  1.42it/s]2025-02-28 01:00:01,211 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  82%|█████████████████████████████████████████████████████████████████████▋               | 82/100 [01:09<00:24,  1.37s/it]2025-02-28 01:00:01,959 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  83%|██████████████████████████████████████████████████████████████████████▌              | 83/100 [01:10<00:20,  1.18s/it]2025-02-28 01:00:03,000 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  84%|███████████████████████████████████████████████████████████████████████▍             | 84/100 [01:11<00:18,  1.14s/it]2025-02-28 01:00:03,815 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  85%|████████████████████████████████████████████████████████████████████████▎            | 85/100 [01:12<00:15,  1.04s/it]2025-02-28 01:00:04,532 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  86%|█████████████████████████████████████████████████████████████████████████            | 86/100 [01:13<00:13,  1.06it/s]2025-02-28 01:00:05,076 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  87%|█████████████████████████████████████████████████████████████████████████▉           | 87/100 [01:13<00:10,  1.21it/s]2025-02-28 01:00:05,832 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  88%|██████████████████████████████████████████████████████████████████████████▊          | 88/100 [01:14<00:09,  1.24it/s]2025-02-28 01:00:06,419 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  89%|███████████████████████████████████████████████████████████████████████████▋         | 89/100 [01:15<00:08,  1.35it/s]2025-02-28 01:00:07,202 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  90%|████████████████████████████████████████████████████████████████████████████▌        | 90/100 [01:15<00:07,  1.33it/s]2025-02-28 01:00:07,978 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  91%|█████████████████████████████████████████████████████████████████████████████▎       | 91/100 [01:16<00:06,  1.32it/s]2025-02-28 01:00:08,973 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  92%|██████████████████████████████████████████████████████████████████████████████▏      | 92/100 [01:17<00:06,  1.21it/s]2025-02-28 01:00:09,853 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  93%|███████████████████████████████████████████████████████████████████████████████      | 93/100 [01:18<00:05,  1.18it/s]2025-02-28 01:00:10,545 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  94%|███████████████████████████████████████████████████████████████████████████████▉     | 94/100 [01:19<00:04,  1.25it/s]2025-02-28 01:00:11,410 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  95%|████████████████████████████████████████████████████████████████████████████████▊    | 95/100 [01:20<00:04,  1.22it/s]2025-02-28 01:00:12,214 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  96%|█████████████████████████████████████████████████████████████████████████████████▌   | 96/100 [01:20<00:03,  1.23it/s]2025-02-28 01:00:13,053 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  97%|██████████████████████████████████████████████████████████████████████████████████▍  | 97/100 [01:21<00:02,  1.22it/s]2025-02-28 01:00:13,992 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  98%|███████████████████████████████████████████████████████████████████████████████████▎ | 98/100 [01:22<00:01,  1.17it/s]2025-02-28 01:00:15,076 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing:  99%|████████████████████████████████████████████████████████████████████████████████████▏| 99/100 [01:23<00:00,  1.08it/s]2025-02-28 01:00:15,876 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing: 100%|████████████████████████████████████████████████████████████████████████████████████| 100/100 [01:24<00:00,  1.13it/s]2025-02-28 01:00:16,599 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Summarizing: 100%|████████████████████████████████████████████████████████████████████████████████████| 100/100 [01:25<00:00,  1.17it/s] 
+2025-02-28 01:00:16,609 - INFO - Analyzing sentiment...
+Sentiment Analysis: 100%|████████████████████████████████████████████████████████████████████████████| 100/100 [00:00<00:00, 458.77it/s] 
+2025-02-28 01:00:16,832 - INFO - Calculating importance scores...
+2025-02-28 01:00:16,836 - INFO - Assigning Positive/Negative labels...
+2025-02-28 01:00:16,837 - INFO - Saving results to reddit_stocks_final.csv...
+2025-02-28 01:00:16,853 - INFO - Analysis complete!
+
+(reddit_scrapper) C:\Users\MPPhy\OneDrive\Desktop\Special Topic in Data Analytics\Assignment2>
