@@ -77,9 +77,6 @@ A Streamlit-powered interactive dashboard was built to:
 ## 🛠️ Required Libraries
 
 pip install -r requirements.txt
-
-git clone https://github.com/your-username/apple-stock-prediction.git
-cd apple-stock-prediction
 Activate virtual environment:
 
 python -m venv .venv
