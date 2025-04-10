@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
+import seaborn as sb
 
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error, accuracy_score, confusion_matrix
@@ -75,6 +75,29 @@ y_pred_bin = (y_pred > threshold).astype(int)
 
 # --- Show Actual vs Predicted Table ---
 st.subheader("\U0001F4CB Actual vs Predicted Table")
+col1, col2, col3, col4 = st.columns(4)
+col1.metric("R² Score", f"{r2_score(y_test, y_pred):.4f}")
+col2.metric("MAE", f"{mean_absolute_error(y_test, y_pred):.4f}")
+col3.metric("MSE", f"{mean_squared_error(y_test, y_pred):.4f}")
+col4.metric("RMSE", f"{np.sqrt(mean_squared_error(y_test, y_pred)):.4f}")
+
+# --- Model Comparison ---
+st.subheader("📊 Model Performance Comparison")
+scores_df = pd.DataFrame(columns=["Model", "R2", "MAE", "RMSE"])
+for name, mdl in models.items():
+    y_pred_all = mdl.predict(X_test)
+    scores_df = pd.concat([scores_df, pd.DataFrame({
+        "Model": [name],
+        "R2": [r2_score(y_test, y_pred_all)],
+        "MAE": [mean_absolute_error(y_test, y_pred_all)],
+        "RMSE": [np.sqrt(mean_squared_error(y_test, y_pred_all))]
+    })])
+
+fig, ax = plt.subplots(figsize=(10, 4))
+sb.barplot(data=scores_df.melt(id_vars='Model'), x='Model', y='value', hue='variable', ax=ax)
+ax.set_title("Model Comparison: R², MAE, RMSE")
+st.pyplot(fig)
+
 
 # Convert to DataFrame
 comparison_df = pd.DataFrame({
@@ -97,9 +120,12 @@ comparison_df["Predicted Close"] = comparison_df["Predicted Close"].round(2)
 comparison_df["Actual Close"] = comparison_df["Actual Close"].round(2)
 
 # Show table
+num_rows = st.slider("Rows to display", 5, 100, 20)
 st.dataframe(comparison_df[["Date", "Actual Change", "Predicted Change", "Actual Close", "Predicted Close", "\U0001F4C8 Direction"]].head(20))
 
-
+st.subheader("📉 Actual vs Predicted Close Price")
+line_chart_df = comparison_df.set_index("Date")[["Actual Close", "Predicted Close"]]
+st.line_chart(line_chart_df)
 
 st.markdown("### Explanation of the table columns:")
 st.markdown("""
@@ -138,7 +164,7 @@ st.markdown(f"""
 st.markdown("### Confusion Matrix:")
 conf_matrix = confusion_matrix(y_test_bin, y_pred_bin)
 fig, ax = plt.subplots()
-sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', ax=ax)
+sb.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', ax=ax)
 ax.set_xlabel("Predicted")
 ax.set_ylabel("Actual")
 ax.set_title("Confusion Matrix")
