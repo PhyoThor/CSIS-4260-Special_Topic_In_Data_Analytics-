@@ -1,4 +1,9 @@
 # 📊 Apple Stock Price Movement Prediction
+## 🚀 Live Dashboard
+
+You can explore the interactive stock prediction dashboard here:
+
+👉 [View Streamlit App](https://csis-4260-specialtopicindataanalytics-git-rgmtpshqpazxqz8ofacx.streamlit.app/)
 
 ## 🧠 Project Overview
 
@@ -72,9 +77,6 @@ A Streamlit-powered interactive dashboard was built to:
 ## 🛠️ Required Libraries
 
 pip install -r requirements.txt
-
-git clone https://github.com/your-username/apple-stock-prediction.git
-cd apple-stock-prediction
 Activate virtual environment:
 
 python -m venv .venv
