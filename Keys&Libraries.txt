@@ -1,0 +1,15 @@
+Requirements.
+-pandas
+-numpy
+-matplotlib
+-seaborn
+-yfinance
+-requests
+-beautifulsoup4
+-lxml
+-nltk
+-scikit-learn
+-wordcloud
+-streamlit
+
+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
