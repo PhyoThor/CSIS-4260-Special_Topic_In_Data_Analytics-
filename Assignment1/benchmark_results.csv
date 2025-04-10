@@ -1,0 +1,13 @@
+Dataset,Library,Operation,Read Time
+1x,CSV,Read,0.4266
+1x,Parquet,Read,0.3523
+1x,CSV,Write,2.0242
+1x,Parquet,Write,0.3437
+10x,CSV,Read,3.879
+10x,Parquet,Read,0.8882
+10x,CSV,Write,20.9722
+10x,Parquet,Write,3.0576
+100x,CSV,Read,3.9515
+100x,Parquet,Read,1.1479
+100x,CSV,Write,24.6565
+100x,Parquet,Write,2.7907
