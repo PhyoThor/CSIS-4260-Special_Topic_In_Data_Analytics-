@@ -121,7 +121,10 @@ comparison_df["Actual Close"] = comparison_df["Actual Close"].round(2)
 
 # Show table
 num_rows = st.slider("Rows to display", 5, 100, 20)
-st.dataframe(comparison_df[["Date", "Actual Change", "Predicted Change", "Actual Close", "Predicted Close", "\U0001F4C8 Direction"]].head(20))
+st.dataframe(
+    comparison_df[["Date", "Actual Change", "Predicted Change", "Actual Close", "Predicted Close", "\U0001F4C8 Direction"]].head(num_rows),
+    use_container_width=True
+)
 
 st.subheader("📉 Actual vs Predicted Close Price")
 line_chart_df = comparison_df.set_index("Date")[["Actual Close", "Predicted Close"]]
