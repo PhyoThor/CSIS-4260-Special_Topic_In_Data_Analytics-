@@ -2,10 +2,10 @@ import pandas as pd
 
 # File paths (reloaded due to kernel reset)
 files = {
-    "Google RSS": ".venv/data/apple_google_news_rss.csv",
-    "Google Custom": ".venv/data/apple_news_rotated.csv",
-    "NewsAPI": ".venv/data/apple_news_newsapi_rotated.csv",
-    "Yahoo Finance": ".venv/data/apple_yahoo_finance_news.csv"
+    "Google RSS": "apple_google_news_rss.csv",
+    "Google Custom": "apple_news_rotated.csv",
+    "NewsAPI": "apple_news_newsapi_rotated.csv",
+    "Yahoo Finance": "apple_yahoo_finance_news.csv"
 }
 # Reload and fix column inconsistencies
 corrected_dataframes = []

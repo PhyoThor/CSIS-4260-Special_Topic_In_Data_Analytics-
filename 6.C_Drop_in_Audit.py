@@ -174,9 +174,7 @@ plt.tight_layout()
 plt.savefig("top_headlines_table_2024_2025.png", dpi=300, bbox_inches = 'tight')
 plt.show()
 
-import pandas as pd
-import matplotlib.pyplot as plt
-
+# -------------------------------------------------------------------------------------
 # Ensure date is parsed
 df_news["Date"] = pd.to_datetime(df_news["Date"], errors="coerce")
 df_news = df_news.dropna(subset=["Date"])
