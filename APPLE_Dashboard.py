@@ -73,6 +73,27 @@ threshold = 0  # log-return threshold
 y_test_bin = (y_test > threshold).astype(int)
 y_pred_bin = (y_pred > threshold).astype(int)
 
+# --- Save Predictions & Metrics to .npy ---
+import os
+
+# Create a folder if it doesn't exist
+output_dir = "saved_model_outputs"
+os.makedirs(output_dir, exist_ok=True)
+
+# Save predictions
+pred_filename = f"y_pred_{model_choice.replace(' ', '_')}.npy"
+np.save(os.path.join(output_dir, pred_filename), y_pred)
+
+# Save evaluation metrics
+metrics = {
+    "r2": r2_score(y_test, y_pred),
+    "mae": mean_absolute_error(y_test, y_pred),
+    "rmse": np.sqrt(mean_squared_error(y_test, y_pred))
+}
+metrics_filename = f"metrics_{model_choice.replace(' ', '_')}.npy"
+np.save(os.path.join(output_dir, metrics_filename), metrics)
+
+
 # --- Show Actual vs Predicted Table ---
 st.subheader("\U0001F4CB Actual vs Predicted Table")
 col1, col2, col3, col4 = st.columns(4)
@@ -82,7 +103,7 @@ col3.metric("MSE", f"{mean_squared_error(y_test, y_pred):.4f}")
 col4.metric("RMSE", f"{np.sqrt(mean_squared_error(y_test, y_pred)):.4f}")
 
 # --- Model Comparison ---
-st.subheader("📊 Model Performance Comparison")
+st.subheader(" Model Performance Comparison")
 scores_df = pd.DataFrame(columns=["Model", "R2", "MAE", "RMSE"])
 for name, mdl in models.items():
     y_pred_all = mdl.predict(X_test)
