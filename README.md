@@ -231,7 +231,7 @@ Key output files include:
 
 ## Course Information
 **Course**: CSIS 4260 - Special Topic in Data Analytics  
-**Institution**: [Your Institution Name]  
+**Institution**: Douglas College (Vancouver, BC)
 **Project Type**: Stock Market Prediction using Machine Learning and Sentiment Analysis
 
 ## License
