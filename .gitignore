@@ -169,3 +169,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Kaggle API credentials (never commit these)
+kaggle.json
+.kaggle/
