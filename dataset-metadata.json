@@ -1,0 +1,20 @@
+{
+  "title": "Apple Stock Price Prediction Dataset",
+  "id": "phyothor/apple-stock-price-prediction",
+  "licenses": [
+    {
+      "name": "CC0-1.0"
+    }
+  ],
+  "description": "A comprehensive dataset combining Apple Inc. (AAPL) 5-year historical stock data with news sentiment analysis. Includes technical indicators (SMA, EMA, RSI, MACD, Bollinger Bands, ATR, ADX) and GPT-generated sentiment scores from multi-source news articles (NewsAPI, Yahoo Finance, Google RSS). Intended for machine learning stock price prediction tasks.",
+  "keywords": [
+    "finance",
+    "stock market",
+    "apple",
+    "sentiment analysis",
+    "machine learning",
+    "time series",
+    "nlp",
+    "technical analysis"
+  ]
+}

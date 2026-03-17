@@ -234,6 +234,58 @@ Key output files include:
 **Institution**: Douglas College (Vancouver, BC)
 **Project Type**: Stock Market Prediction using Machine Learning and Sentiment Analysis
 
+## Kaggle Integration
+
+The project dataset can be published to and downloaded from Kaggle using the
+[Kaggle API](https://www.kaggle.com/docs/api).
+
+### Dataset on Kaggle
+The published dataset is available at:
+[https://www.kaggle.com/datasets/phyothor/apple-stock-price-prediction](https://www.kaggle.com/datasets/phyothor/apple-stock-price-prediction)
+
+### Setup Kaggle API credentials
+
+1. Go to [https://www.kaggle.com/settings](https://www.kaggle.com/settings) →
+   **API** → **Create New Token**.  This downloads a `kaggle.json` file.
+2. Place the file at `~/.kaggle/kaggle.json` (Linux/macOS) or
+   `%USERPROFILE%\.kaggle\kaggle.json` (Windows).
+3. On Linux/macOS, restrict file permissions:
+   ```bash
+   chmod 600 ~/.kaggle/kaggle.json
+   ```
+   Alternatively, export your credentials as environment variables:
+   ```bash
+   export KAGGLE_USERNAME=your_username
+   export KAGGLE_KEY=your_api_key
+   ```
+
+### Upload / update the dataset on Kaggle
+
+Install the Kaggle package (already included in `requirements.txt`):
+```bash
+pip install kaggle
+```
+
+**Create a new dataset (first time):**
+```bash
+python upload_to_kaggle.py --new
+```
+
+**Push an updated version to an existing dataset:**
+```bash
+python upload_to_kaggle.py
+```
+
+**Specify a custom project directory:**
+```bash
+python upload_to_kaggle.py --dir /path/to/project
+```
+
+### Download the dataset from Kaggle
+```bash
+kaggle datasets download -d phyothor/apple-stock-price-prediction
+```
+
 ## License
 This project is part of an academic assignment for CSIS 4260.
 

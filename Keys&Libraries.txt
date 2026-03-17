@@ -12,4 +12,7 @@ Requirements.
 -wordcloud
 -streamlit
 
-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
+# OpenAI API key — do NOT commit real keys here.
+# Set the OPENAI_API_KEY environment variable instead:
+#   export OPENAI_API_KEY=sk-...
+OPENAI_API_KEY=<your_openai_api_key_here>
