@@ -1,0 +1,10 @@
+topic_label,Reddit_Frequency,CNN_Frequency
+"nvidia, stock, ai",30.0,
+"stock, company, intel",26.0,
+"stock, growth, reddit",25.0,
+"ai, revenue, corz",13.0,
+"market, high, stock",6.0,
+"nvidia, geforce, driver",,60.0
+"nvidia, dgx, station",,20.0
+"dlss, nvidia, app",,10.0
+"nvidia, rtx, gpu",,10.0

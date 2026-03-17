@@ -1,0 +1,6 @@
+topic_id,label
+0,"Topic 0: nvidia, rtx, gpu"
+1,"Topic 1: nvidia, dgx, station"
+2,"Topic 2: nvidia, dlss, app"
+3,"Topic 3: dlss, nvidia, app"
+4,"Topic 4: nvidia, geforce, driver"
