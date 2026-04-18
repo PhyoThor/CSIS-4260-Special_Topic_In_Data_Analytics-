@@ -3,7 +3,7 @@ import pandas as pd
 import time
 
 # Your NewsAPI key
-NEWSAPI_KEY = "3359a528b4f74fe4be6dd3c870759dac"  
+NEWSAPI_KEY = "xxxxxxx"  
 
 # Define Apple-related search terms
 queries = [
