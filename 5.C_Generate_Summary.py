@@ -4,7 +4,7 @@ import time
 import json
 
 # === GPT Setup ===
-client = OpenAI(api_key="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")  # Replace with your API key
+client = OpenAI(api_key="xx")  # Replace with your API key
 
 # === File Paths ===
 INPUT_FILE = "apple_stock_news_clean_start.csv"
