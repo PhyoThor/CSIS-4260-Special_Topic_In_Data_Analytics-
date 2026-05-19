@@ -5,7 +5,7 @@ import json
 import csv
 
 # === Setup OpenAI ===
-client = OpenAI(api_key="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")  # Replace with your actual key
+client = OpenAI(api_key="xxx")  # Replace with your actual key
 
 # === File Setup ===
 INPUT_FILE = "apple_stock_news_with_summary_ml.csv"
